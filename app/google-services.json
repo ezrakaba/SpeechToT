@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "805402505839",
+    "project_id": "signup-login-firebase-5baf4",
+    "storage_bucket": "signup-login-firebase-5baf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805402505839:android:0719a43f7c4f8d8ae5539a",
+        "android_client_info": {
+          "package_name": "com.capstonegroupproject.speechtotext"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIF2U7RHABvG47lBtkF66rexdi6OK-D2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
