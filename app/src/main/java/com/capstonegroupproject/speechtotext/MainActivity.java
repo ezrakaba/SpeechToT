@@ -90,6 +90,29 @@ public class MainActivity extends AppCompatActivity {
         initTextToSpeech();
         findById();
         result();
+
+        setContentView(R.layout.activity_main);
+        logout = findViewById(R.id.logout);
+        userName = findViewById(R.id.userName);
+        gOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gClient = GoogleSignIn.getClient(this, gOptions);
+        GoogleSignInAccount gAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if (gAccount != null){
+            String gName = gAccount.getDisplayName();
+            userName.setText(gName);
+        }
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gClient.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        finish();
+                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    }
+                });
+            }
+        });
     }
 
 
