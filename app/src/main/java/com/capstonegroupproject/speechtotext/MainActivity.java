@@ -236,13 +236,17 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com"));
             startActivity(intent);
         }
+        if(messages.indexOf("spotify")!=-1){
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.spotify.com"));
+            startActivity(intent);
+        }
         if(messages.indexOf("search")!=-1){
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse
                     ("https://www.google.com/search?q="+messages.replace("search"," ")));
             startActivity(intent);
         }
         if(messages.indexOf("remember!")!=-1){
-            speak("Noted. I will reminder you that");
+            speak("Noted. I will remind you that");
             writeToFile(messages.replace("do you remember anything", " "));
         }
         if(messages.indexOf("know")!=-1){
